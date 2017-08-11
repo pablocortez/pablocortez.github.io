@@ -1,0 +1,353 @@
+ body {
+    	margin:0;
+    	padding:0;
+ font-family: sans-serif, arial;
+ 		color: #eee;
+    	font-weight: 400;
+    	font-size:20px;
+    	letter-spacing: 0.02em;
+		overflow-x: hidden;
+		background: rgba(0,0,0,0.70);
+    }
+
+		canvas {
+			position: fixed;
+			top: 0; left: 0;
+			z-index: -1;
+		}
+
+		.firstContainer {
+			width:100%;
+    		min-height:100vh;
+    		background: rgba(0,0,0,0.40);
+    		position:absolute;
+		}
+
+		.secondContainer
+		{
+			min-height:1300px;
+			background: rgba(0,0,0,0.6);
+			position:absolute;
+			right:0px;
+			transition: width 0.5s;
+		}
+
+		.firstActive .secondContainer {
+			width: 80px;
+			cursor: pointer;
+		}
+
+		.secondActive .secondContainer {
+			width: calc(100% - 80px);
+		}
+
+
+		.second {
+			color:blue;
+		}
+
+
+
+
+		.firstContainer .vertical {
+		   -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+			color:#000000;
+			padding:30px 30px 30px 30px;
+			white-space: nowrap;
+			position: fixed;
+			transition: left 0.4s  ease 0.2s;
+			top:90px;
+		}
+
+
+
+		.secondContainer .vertical {
+   -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+			color:white;
+			top:110px;
+			left: calc(100% - 122px);
+			padding:0;
+			white-space: nowrap;
+			position: fixed;
+			transition: left 0.4s  ease 0.1s;
+
+		}
+
+		.firstActive .firstContainer .vertical {
+			left:-150px;
+		}
+
+
+		.secondActive .secondContainer .vertical {
+			left:100%;
+		}
+
+		.secondActive .firstContainer .vertical {
+			left:-60px;
+		}
+
+
+
+		.main_text {
+
+			margin:0 20% 0 20%;
+			background: transparent;
+
+		}
+
+		.firstActive .gallery {
+			display:none;
+			opacity:0;
+		}
+
+		.gallery{
+			margin:0 10%;
+			transition: opacity 0.5s ease 0.5s;
+			color: #ffffff;
+
+		}
+
+
+		a {
+			color: #3498DB;
+			text-decoration: none;
+		}
+
+		.secondContainer a {
+			color: #CAFEFF;
+			text-decoration: none;
+		}
+
+		.secondContainer a:hover {
+			color: #CAFEFF;
+			text-decoration: none;
+		}
+
+		h1{
+			font-size: 22px;
+			margin:200px 0 150px 0;
+			font-weight: normal;
+			    	letter-spacing: 0.04em;
+		}
+
+		h3{
+			font-size: 14px;
+			font-weight: bold;
+			margin:40px 0 0 0;
+		}
+
+		p{
+			margin:10px 0 110px 5%;
+			line-height: 150%;
+			font-size: 22px;
+			    	letter-spacing: 0.02em;
+
+		}
+
+		i{
+
+			border-bottom:1px solid #ffebeb;
+			padding:0 0 1px 0;
+		}
+
+		li{
+			margin:10px 0 0 5%	;
+
+		}
+		ul {
+			margin:20px 0 20px 0;
+			padding: 0;
+			list-style: none;
+		}
+
+
+
+.container {
+  margin-top:2em;
+  position:relative;
+  width:100%;
+  text-align: center;
+}
+
+img {
+
+    opacity: 0;
+    margin:20px;
+    width:40%;
+  transition: opacity 0.7s ease-in;
+}
+
+
+ a{
+
+
+		padding:0 0 3px 0;
+
+}
+
+
+a:hover{
+
+	border-bottom: 1px solid #fff;
+			padding:0 0 3px 0;
+	color: #3498DB;
+
+	  -o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  /* ...and now for the proper property */
+  transition:1s;
+}
+
+
+
+	.tooltip{
+   			display: inline;
+    		position: relative;
+
+    			border-bottom:1px solid #ffebeb;
+			padding:0 0 1px 0;
+
+
+		}
+
+		.tooltip:hover:after{
+    		background: #fff;
+    		border:1px solid #ff8988;
+    		border-radius: 3px;
+    		top: 45px;
+    		color: #ff8988;
+    		content: attr(title);
+    		left: -40px;
+    		padding: 15px 15px;
+    		position: absolute;
+    		z-index: 98;
+    		width: 120px;
+    		font-size:12px;
+    		font-style: italic;
+    		text-align: center;
+    		line-height: 100%;
+   		}
+
+		.tooltip:hover:before{
+    		border:1px solid #ff8988;
+    		border-width: 1px 0px 20px 1px;
+    		top: 25px;
+    		content: "";
+    		left: 50%;
+    		position: absolute;
+    		z-index: 99;
+
+
+		}
+
+
+
+
+@media screen and (max-width: 924px) {
+
+
+			.secondContainer
+		{
+			min-height:1170px;
+			background: #ff8988;
+			position:absolute;
+			right:0px;
+			transition: width 0.5s;
+		}
+
+			.main_text {
+
+			margin:0 20% 0 10%;
+			background: transparent;
+
+		}
+
+		h1 {
+
+			font-size:18px;
+			margin:100px 0 30px 5%;
+			width: 70%;
+		}
+
+h1 a {font-size: 12px; line-height: 200%;}
+
+p {
+
+			font-size:18px;
+		}
+
+
+		.firstActive .secondContainer {
+			width: 60px;
+			cursor: pointer;
+		}
+
+
+		.firstActive .firstContainer .vertical {
+			left:-150px;
+		}
+
+
+		.secondActive .secondContainer .vertical {
+			left:100%;
+		}
+
+		.secondActive .firstContainer .vertical {
+			left:-90px;
+		}
+
+
+
+		.firstContainer .vertical {
+		   -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+			color:#000000;
+			padding:30px 30px 30px 30px;
+			white-space: nowrap;
+			position: fixed;
+			transition: left 0.4s  ease 0.2s;
+			top:90px;
+		}
+
+
+
+		.secondContainer .vertical {
+   -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+			color:white;
+			top:110px;
+			left: calc(100% - 100px);
+			padding:0;
+			white-space: nowrap;
+			position: fixed;
+			transition: left 0.4s  ease 0.1s;
+
+		}
+
+				.secondActive .secondContainer {
+			width: calc(100% - 50px);
+		}
+
+		li{
+			font-size: 14px;
+			width: 60%;
+			line-height: 140%;
+		}
+
+  }
